@@ -1,0 +1,51 @@
+{
+  "name": "redux-hotjar-trigger",
+  "version": "0.0.1",
+  "description": "Redux middleware for Hotjar JavaScript Triggers",
+  "main": "lib/index.js",
+  "scripts": {
+    "build": "npm run build:cjs && npm run build:umd && npm run build:umd:min",
+    "build:cjs": "babel src -d lib",
+    "build:umd": "cross-env NODE_ENV=development webpack src/index.js dist/redux-hotjar-trigger.js",
+    "build:umd:min": "cross-env NODE_ENV=production webpack src/index.js dist/redux-hotjar-trigger.min.js"
+  },
+  "files": [
+    "dist",
+    "lib",
+    "README.md"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alexcastillo/redux-hotjar-trigger.git"
+  },
+  "keywords": [
+    "react",
+    "redux",
+    "hotjar",
+    "usability",
+    "poll"
+  ],
+  "author": {
+    "name": "Alex Castillo",
+    "email": "alex@castillo.io"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/alexcastillo/redux-hotjar-trigger/issues"
+  },
+  "homepage": "https://github.com/alexcastillo/redux-hotjar-trigger#readme",
+  "peerDependencies": {
+    "redux": "3.*"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.18.0",
+    "babel-loader": "^6.2.7",
+    "babel-plugin-transform-es2015-modules-commonjs": "^6.18.0",
+    "babel-plugin-transform-object-rest-spread": "^6.16.0",
+    "babel-preset-es2015": "^6.18.0",
+    "cross-env": "^3.1.3",
+    "json-loader": "^0.5.4",
+    "redux": "^3.6.0",
+    "webpack": "^1.13.3"
+  }
+}
