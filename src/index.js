@@ -11,7 +11,7 @@ export default function middlewareFactory (settings) {
     }
   }
 
-  if (!hj) {
+  if (!window.hj) {
     inject(settings);
   }
 
